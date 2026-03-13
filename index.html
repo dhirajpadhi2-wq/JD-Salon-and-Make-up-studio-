@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Luxury Beauty Salon</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+scroll-behavior:smooth;
+}
+
+body{
+background:white;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#ff4da6;
+color:white;
+position:sticky;
+top:0;
+}
+
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:url("salon1.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+background:rgba(0,0,0,0.5);
+padding:25px;
+border-radius:10px;
+}
+
+.hero p{
+margin-top:10px;
+}
+
+.hero button{
+margin-top:20px;
+padding:14px 30px;
+border:none;
+background:#ff4da6;
+color:white;
+font-size:16px;
+border-radius:40px;
+cursor:pointer;
+}
+
+/* SECTIONS */
+
+.section{
+padding:70px 20px;
+text-align:center;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.service{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.service:hover{
+transform:translateY(-10px);
+}
+
+.service h3{
+color:#ff4da6;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:10px;
+margin-top:30px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+/* BEFORE AFTER */
+
+.beforeafter{
+background:#fff0f6;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:300px;
+border:0;
+margin-top:20px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+background:#222;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>Beauty Parlour</h2>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div>
+
+<h1>Feel Beautiful Every Day</h1>
+
+<p>Professional Beauty Services For Modern Women</p>
+
+<button onclick="window.location.href='tel:9668637683'">
+Call Now
+</button>
+
+</div>
+
+</div>
+
+<!-- SERVICES -->
+
+<div class="section" id="services">
+
+<h2>Our Services</h2>
+
+<div class="services">
+
+<div class="service">
+<h3>Hair Styling</h3>
+<p>Modern haircut and styling</p>
+</div>
+
+<div class="service">
+<h3>Facial Treatment</h3>
+<p>Healthy glowing skin</p>
+</div>
+
+<div class="service">
+<h3>Bridal Makeup</h3>
+<p>Perfect wedding makeup</p>
+</div>
+
+<div class="service">
+<h3>Hair Spa</h3>
+<p>Deep hair nourishment</p>
+</div>
+
+<div class="service">
+<h3>Skin Care</h3>
+<p>Professional skin treatment</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- GALLERY -->
+
+<div class="section" id="gallery">
+
+<h2>Salon Gallery</h2>
+
+<div class="gallery">
+
+<img src="salon1.jpg">
+<img src="salon2.jpg">
+<img src="salon3.jpg">
+<img src="salon4.jpg">
+
+</div>
+
+</div>
+
+<!-- BEFORE AFTER -->
+
+<div class="section beforeafter">
+
+<h2>Beautiful Transformations</h2>
+
+<p>
+Our clients leave the salon feeling confident, beautiful and happy.
+Experience the luxury beauty treatment today.
+</p>
+
+</div>
+
+<!-- MAP -->
+
+<div class="section">
+
+<h2>Visit Our Salon</h2>
+
+<iframe src="https://maps.google.com/maps?q=beauty%20parlour&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="section" id="contact">
+
+<h2>Book Appointment</h2>
+
+<p>Call or WhatsApp for instant booking</p>
+
+<button onclick="window.location.href='tel:9668637683'">
+Call Now
+</button>
+
+</div>
+
+<a class="whatsapp" href="https://wa.me/919668637683">
+WhatsApp
+</a>
+
+<footer>
+
+Beauty Parlour  
+Call : 9668637683
+
+</footer>
+
+</body>
+</html>
