@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Salon Makeup Studio</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -15,7 +14,8 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Poppins;
+scroll-behavior:smooth;
 }
 
 body{
@@ -26,12 +26,16 @@ color:#333;
 /* HEADER */
 
 header{
+position:fixed;
+width:100%;
+top:0;
+background:#ff4da6;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-background:#ff4da6;
+padding:15px 40px;
 color:white;
+z-index:1000;
 }
 
 nav a{
@@ -43,7 +47,7 @@ text-decoration:none;
 /* HERO */
 
 .hero{
-height:90vh;
+height:100vh;
 background:url("salon.jpg") center/cover;
 display:flex;
 align-items:center;
@@ -53,30 +57,27 @@ color:white;
 }
 
 .hero h1{
-font-size:48px;
+font-size:50px;
 background:rgba(0,0,0,0.5);
-padding:20px;
+padding:25px;
 border-radius:10px;
-}
-
-.hero p{
-margin-top:10px;
 }
 
 .hero button{
 margin-top:20px;
-padding:12px 25px;
+padding:14px 35px;
 border:none;
 background:#ff4da6;
 color:white;
 border-radius:30px;
 font-size:16px;
+cursor:pointer;
 }
 
 /* SECTION */
 
 .section{
-padding:60px 20px;
+padding:80px 20px;
 text-align:center;
 }
 
@@ -84,19 +85,24 @@ text-align:center;
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 margin-top:30px;
 }
 
-.service{
+.card{
 background:white;
 padding:25px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-.service h3{
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
 color:#ff4da6;
 }
 
@@ -114,7 +120,28 @@ width:100%;
 border-radius:10px;
 }
 
-/* WHATSAPP */
+/* REVIEW */
+
+.review{
+background:#fff0f6;
+}
+
+.review-box{
+max-width:600px;
+margin:auto;
+font-style:italic;
+}
+
+/* MAP */
+
+iframe{
+width:100%;
+height:300px;
+border:0;
+margin-top:20px;
+}
+
+/* WHATSAPP BUTTON */
 
 .whatsapp{
 position:fixed;
@@ -123,8 +150,9 @@ right:20px;
 background:#25D366;
 color:white;
 padding:15px 20px;
-border-radius:40px;
+border-radius:50px;
 text-decoration:none;
+font-weight:600;
 }
 
 /* FOOTER */
@@ -132,9 +160,8 @@ text-decoration:none;
 footer{
 background:#222;
 color:white;
-padding:20px;
 text-align:center;
-margin-top:40px;
+padding:20px;
 }
 
 </style>
@@ -148,10 +175,11 @@ margin-top:40px;
 <h2>Salon Makeup Studio</h2>
 
 <nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
+
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
 </nav>
 
 </header>
@@ -164,10 +192,10 @@ margin-top:40px;
 
 <h1>Luxury Beauty & Makeup Studio</h1>
 
-<p>Feel Beautiful. Feel Confident.</p>
-
 <button onclick="window.location.href='tel:9668637683'">
+
 Call Now
+
 </button>
 
 </div>
@@ -176,35 +204,35 @@ Call Now
 
 <!-- SERVICES -->
 
-<div class="section">
+<div class="section" id="services">
 
 <h2>Our Services</h2>
 
 <div class="services">
 
-<div class="service">
+<div class="card">
 <h3>Hair Styling</h3>
-<p>Modern haircut & styling</p>
+<p>Professional haircut & styling</p>
 </div>
 
-<div class="service">
+<div class="card">
 <h3>Facial Treatment</h3>
 <p>Glow your skin instantly</p>
 </div>
 
-<div class="service">
+<div class="card">
 <h3>Bridal Makeup</h3>
-<p>Perfect bridal look</p>
+<p>Perfect bridal makeup look</p>
 </div>
 
-<div class="service">
+<div class="card">
 <h3>Hair Spa</h3>
 <p>Deep hair nourishment</p>
 </div>
 
-<div class="service">
+<div class="card">
 <h3>Skin Care</h3>
-<p>Professional beauty treatment</p>
+<p>Healthy glowing skin</p>
 </div>
 
 </div>
@@ -213,7 +241,7 @@ Call Now
 
 <!-- GALLERY -->
 
-<div class="section">
+<div class="section" id="gallery">
 
 <h2>Our Salon</h2>
 
@@ -228,35 +256,48 @@ Call Now
 
 </div>
 
+<!-- REVIEW -->
+
+<div class="section review">
+
+<h2>Happy Clients</h2>
+
+<div class="review-box">
+
+“Best salon experience. Professional service and amazing results!”
+
+</div>
+
+</div>
+
 <!-- MAP -->
 
 <div class="section">
 
 <h2>Visit Our Salon</h2>
 
-<iframe
-src="https://maps.google.com/maps?q=salon&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%"
-height="300"
-style="border:0;">
-</iframe>
+<iframe src="https://maps.google.com/maps?q=salon&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
 
 </div>
 
 <!-- CONTACT -->
 
-<div class="section">
+<div class="section" id="contact">
 
 <h2>Book Appointment</h2>
 
 <button onclick="window.location.href='tel:9668637683'">
+
 Call Now
+
 </button>
 
 </div>
 
 <a class="whatsapp" href="https://wa.me/919668637683">
+
 WhatsApp
+
 </a>
 
 <footer>
